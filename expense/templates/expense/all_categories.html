@@ -1,0 +1,16 @@
+{% extends 'expense/base.html' %}
+
+{% block title %}Expense Manager{% endblock %}
+
+
+{% block content %}
+
+    {% for category in categories %}
+        <div class="col-sm-4 col-lg-2">
+            <h3>{{category.category_name}}</h3><br>
+            <img src="{{ category.category_logo.url }}" class="img-responsive" width="75" height="75" /><br>
+            <a href="" class="btn btn-primary btn-sm" role="button">View All Items </a>
+        </div>
+    {% endfor %}
+
+{% endblock%}

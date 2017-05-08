@@ -1,0 +1,105 @@
+{% extends 'expense/base.html' %}
+
+{% block title %}Expense Manager{% endblock %}
+
+
+{% block content %}
+<div class="col-sm-12">
+    <br>
+    <br>
+    <h1 align="center"><b>Welcome to Expense Manager!</b></h1>
+    <h6 align="center">Developed and Designed by M. Sadegh Aliakbarian, 2017</h6>
+    <br>
+    <hr>
+    <br>
+
+
+
+    <div align="center" class="8 col-md-4">
+        <div class="panel panel-default">
+                <div class="panel-body">
+<h3>Add new categories in your list.</h3><br>
+    <hr>
+        <img  align="center" src="media/category_logo.png" class="img-responsive" width="175" height="175" />
+
+        Given this option, you can add multiple categories,
+        e.g., medications, bills, fuel, etc. and then add corresponding items.<br>
+        <br><a href="{%url 'all_categories'%}" class="btn btn-primary btn-sm" role="button">View all categories </a>
+        or <a href="{%url 'create_category'%}" class="btn btn-primary btn-sm" role="button">Add a category </a>
+
+                </div>
+        </div>
+    </div>
+
+
+    <div align="center" class="8 col-md-4">
+        <div class="panel panel-default">
+                <div class="panel-body">
+<h3>Add new items in your list.</h3><br>
+    <hr>
+        <img align="center" src="media/expense_item_logo.png" class="img-responsive" width="175" height="175" />
+
+        When you have enough categories, you can update you expense
+        item list by adding items whenever you purchase them. Just add you item under the corresponding category,
+        enter the price and date, and you're done!<br>
+        <br><a href="{%url 'all_expenses'%}" class="btn btn-primary btn-sm" role="button">View all items</a> or
+        <a href="{%url 'add_expense'%}" class="btn btn-primary btn-sm" role="button">Add an item</a>
+
+                </div>
+        </div>
+    </div>
+
+
+    <div align="center" class="8 col-md-4">
+        <div class="panel panel-default">
+                <div class="panel-body">
+ <h3>Add your income :)</h3><br>
+    <hr>
+        <img align="center" src="media/income_logo.png" class="img-responsive" width="175" height="175" />
+
+        In addition to adding your expenses, you can add how much income you have. No matter it is your salary
+        or a gift, add that into the application, so you can find our how much you have saved after a while!<br>
+        <br><a href="#" class="btn btn-primary btn-sm" role="button">View all incomes</a> or
+        <a href="#" class="btn btn-primary btn-sm" role="button">Add an income</a>
+
+                </div>
+        </div>
+    </div>
+
+
+    <div align="center" class="8 col-md-4">
+        <div class="panel panel-default">
+                <div class="panel-body">
+ <h3>Get the report!</h3><br>
+    <hr>
+
+        <img align="center" src="media/report_logo.png" class="img-responsive" width="175" height="175" />
+
+        Wanna know how much you've spent? Or, how much you've spent on a specific
+        category? It would be really simple using our Report app!<br>
+        <br><a href="{%url 'report'%}" class="btn btn-primary btn-sm" role="button">Get a report </a>
+
+                </div>
+        </div>
+    </div>
+
+
+        <div align="center" class="8 col-md-4">
+        <div class="panel panel-default">
+                <div class="panel-body">
+<h3>Report in a single image!</h3><br>
+    <hr>
+        <img align="center" src="media/chart_logo.png" class="img-responsive" width="175" height="175" />
+
+        Your expense item list is too large? You can visually see how
+        much you've spent and on what you've spent your most of money!<br>
+        <br><a href="{%url 'report'%}" class="btn btn-primary btn-sm" role="button">View charts </a>
+
+                </div>
+        </div>
+    </div>
+
+
+
+</div>
+{% endblock%}

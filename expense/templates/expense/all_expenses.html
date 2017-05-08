@@ -1,0 +1,14 @@
+{% extends 'expense/base.html' %}
+
+{% block title %}Expense Manager{% endblock %}
+
+
+{% block content %}
+<div class="col-sm-12">
+    {% for item in items %}
+            <img align="left" src="{{ item.item_category.category_logo.url }}" class="img-responsive" width="20" height="20" />
+            <h3>{{item.item_name}}</h3>, At {{item.item_date}}, spend: AUD$ {{item.item_cost}} for {{item.item_category.category_name}}<br>
+
+    {% endfor %}
+</div>
+{% endblock%}
